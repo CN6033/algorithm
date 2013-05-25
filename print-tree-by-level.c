@@ -10,10 +10,12 @@ typedef struct node
 
 void print_tree_by_level(node* root)
 {
+	if(root == 0){return;}
+	
 	/*单层节点数不能超过99(100 - 1)个。*/
 	const int size = 100;
 	node* queue[size];
-	/*m指向当前节点的队列下标*/
+	/*curr指向当前节点的队列下标*/
 	int curr = 0;
 	/*n指向即下一个将插入节点的队列下标*/
 	int n = 0;
